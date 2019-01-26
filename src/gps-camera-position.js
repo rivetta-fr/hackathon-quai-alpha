@@ -4,7 +4,6 @@ AFRAME.registerComponent('gps-camera-position', {
 
 	originCoords: null,
 	currentCoords: null,
-	
 	schema: {
 		minAccuracy: {
 			type: 'int',

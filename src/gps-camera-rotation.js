@@ -89,6 +89,7 @@ AFRAME.registerComponent('gps-camera-rotation', {
 	_onDeviceOrientation: function( event ){
 		
 		// compute heading
+		console.log(event.webkitCompassHeading);
 		if( event.webkitCompassHeading  !== undefined ){
 			if(event.webkitCompassAccuracy < 50){
 				this.heading = event.webkitCompassHeading

@@ -53,12 +53,12 @@ AFRAME.registerComponent('gps-camera-debug', {
 					if( gpsPosition.hasOwnProperty('currentCoords') ){
 						console.log(gpsPosition)
 						if(gpsPosition.currentCoords){
-							current_coords_longitude.innerText = gpsPosition.currentCoords.longitude
-							current_coords_latitude.innerText = gpsPosition.currentCoords.latitude
+							current_coords_longitude.innerText = gpsPosition.currentCoords.longitude;
+							current_coords_latitude.innerText = gpsPosition.currentCoords.latitude;
 						}
 						if(gpsPosition.originCoords){
-							origin_coords_longitude.innerText = gpsPosition.originCoords.longitude
-							origin_coords_latitude.innerText = gpsPosition.originCoords.latitude
+							origin_coords_longitude.innerText = gpsPosition.originCoords.longitude;
+							origin_coords_latitude.innerText = gpsPosition.originCoords.latitude;
 						}
 					}
 					
