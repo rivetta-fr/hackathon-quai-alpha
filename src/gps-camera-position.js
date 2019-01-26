@@ -39,10 +39,12 @@ AFRAME.registerComponent('gps-camera-position', {
 		}
 
 		// https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/watchPosition
-		return navigator.geolocation.watchPosition(onSuccess, onError, {
-			maximumAge: 6000,
-			timeout: 27000
-		})
+		// return navigator.geolocation.watchPosition(onSuccess, onError, {
+		// 	maximumAge: 6000,
+		// 	timeout: 27000
+		// })
+
+		return navigator.getCurrentPosition(onSuccess);
 	},
 
 	_updatePosition: function () {
