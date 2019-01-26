@@ -1,12 +1,8 @@
 AFRAME.registerComponent('gps-camera-rotation', {
-	
 	lookControls: null,
 	heading: null,
-	
-	
-	schema: {
-	},
-	
+	schema: {},
+
 	init: function () {
 		
 		if( this.el.components['look-controls'] === undefined ) return
@@ -26,11 +22,8 @@ AFRAME.registerComponent('gps-camera-rotation', {
 	},
 	
 	tick: function( time, timeDelta ){
-		
 		if( this.heading === null ) return
-		
 		this._updateRotation()
-		
 	},
 	
 	remove: function () {
@@ -89,17 +82,16 @@ AFRAME.registerComponent('gps-camera-rotation', {
 	_onDeviceOrientation: function( event ){
 		
 		// compute heading
-		console.log(event.webkitCompassHeading);
-		if( event.webkitCompassHeading  !== undefined ){
-			if(event.webkitCompassAccuracy < 50){
+		if (event.webkitCompassHeading  !== undefined ){
+			if (event.webkitCompassAccuracy < 50){
 				this.heading = event.webkitCompassHeading
-			}else{
+			} else {
 				console.warn('webkitCompassAccuracy is event.webkitCompassAccuracy')
 			}			
-		}else if( event.alpha !== null ){
-			if(event.absolute === true || event.absolute === undefined ) {
+		} else if( event.alpha !== null ){
+			if (event.absolute === true || event.absolute === undefined ) {
 				this.heading = this._computeCompassHeading(event.alpha, event.beta, event.gamma)
-			}else{
+			} else {
 				console.warn('event.absolute === false')
 			}
 		}else{
