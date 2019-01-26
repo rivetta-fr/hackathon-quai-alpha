@@ -44,7 +44,7 @@ AFRAME.registerComponent('gps-camera-position', {
 		// 	timeout: 27000
 		// })
 
-		return navigator.getCurrentPosition(onSuccess);
+		return navigator.geolocation.getCurrentPosition(onSuccess);
 	},
 
 	_updatePosition: function () {
