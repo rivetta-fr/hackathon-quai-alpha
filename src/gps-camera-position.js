@@ -8,7 +8,7 @@ AFRAME.registerComponent('gps-camera-position', {
 	schema: {
 		minAccuracy: {
 			type: 'int',
-			default: 100
+			default: 1000
 		},
 	},
 	
@@ -55,7 +55,6 @@ AFRAME.registerComponent('gps-camera-position', {
 		if( this.originCoords === null ) this.originCoords = this.currentCoords
 		
 		var position = this.el.getAttribute('position')
-		
 		// compute position.x
 		var dstCoords = {
 			longitude: this.currentCoords.longitude,

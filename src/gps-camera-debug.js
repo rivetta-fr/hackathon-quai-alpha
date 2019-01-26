@@ -46,12 +46,12 @@ AFRAME.registerComponent('gps-camera-debug', {
 					}
 					break
 				case 'position':
-					//console.log('camera position changed', event.detail.newData)
 					camera_p_x.innerText = event.detail.newData.x
 					camera_p_z.innerText = event.detail.newData.z
 
 					var gpsPosition = camera.components['gps-camera-position']
-					if( gpsPosition ){
+					if( gpsPosition.hasOwnProperty('currentCoords') ){
+						console.log(gpsPosition)
 						if(gpsPosition.currentCoords){
 							current_coords_longitude.innerText = gpsPosition.currentCoords.longitude
 							current_coords_latitude.innerText = gpsPosition.currentCoords.latitude
