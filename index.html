@@ -15,9 +15,14 @@
 </head>
 <body style='margin: 0px; overflow: hidden;'>
 	<a-scene embedded arjs='sourceType: webcam;'>
-		<a-sphere gps-entity-place="latitude: 48.17869; longitude: 6.44158;" radius=2 color=green></a-sphere>
+		<a-sphere gps-entity-place="latitude: 48.17869; longitude: 6.44158;" radius=5 color=green></a-sphere>
+		<!-- eglise -->
+		<a-sphere gps-entity-place="latitude: 48.17810; longitude: 6.44371;" radius=5 color=green></a-sphere>
+		<!-- <a-text value="eglise de notre dame au cierge"></a-text> -->
+		<!-- brasserie -->
+		<a-sphere gps-entity-place="latitude: 48.17827; longitude: 6.43932;" radius=5 color=green></a-sphere>
 		<!-- <a-sphere gps-entity-place="latitude: 48.1878018; longitude: 6.4528384;" radius=2 color=green></a-sphere> -->
-		<a-camera id="camera" gps-camera-position gps-camera-rotation gps-camera-debug></a-camera>
+		<a-entity id="camera" camera gps-camera-position gps-camera-rotation gps-camera-debug></a-camera>
 	</a-scene>
 </body>
 
