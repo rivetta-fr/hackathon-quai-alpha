@@ -29,14 +29,12 @@ AFRAME.registerComponent('gps-entity-place', {
 			this._cameraGpsPosition = camera.components['gps-camera-position']
 		}
 		
-		console.log(this._cameraGpsPosition.originCoords)
 		if( this._cameraGpsPosition.originCoords === null ) return
 	
 		clearInterval(this._deferredInitInterval)
 		this._deferredInitInterval = 0		
 		
 		this._updatePosition()
-
 		
 		return true
 	},
