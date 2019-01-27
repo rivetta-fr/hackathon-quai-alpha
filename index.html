@@ -15,7 +15,14 @@
     </a-scene> -->
     <a-scene embedded arjs>
       <!-- create your content here. just a box for now -->
-      <a-box src="assets/vrt.jpeg" position='0 0.5 0'></a-box>
+      <a-box src="assets/vrt.jpeg" position='0 0.5 0'>
+        <a-animation attribute="rotation"
+          dur="10000"
+          fill="forwards"
+          to="0 360 0"
+          repeat="indefinite">
+        </a-animation>
+      </a-box>
       <!-- define a camera which will move according to the marker position -->
       <a-marker-camera preset='hiro'></a-marker-camera>
     </a-scene>
