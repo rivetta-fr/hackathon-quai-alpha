@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>AR location based</title>
 	<script src="vendor/aframe-v0.8.2.js"></script>
@@ -22,7 +22,7 @@
 		<!-- <a-sphere gps-entity-place="latitude: 48.1878018; longitude: 6.4528384;" radius=2 color=green></a-sphere> -->
 	
 		<a-box color="red" position="0 0 -5" rotation="0 45 45"></a-box>	
-		<a-entity id="camera" camera gps-camera-rotation gps-camera-debug></a-camera>
+		<a-camera id="camera" gps-camera-rotation gps-camera-debug></a-camera>
 	</a-scene>
 </body>
 
