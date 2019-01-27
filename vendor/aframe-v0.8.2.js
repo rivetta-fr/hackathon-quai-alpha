@@ -65598,8 +65598,8 @@ module.exports.Component = registerComponent('look-controls', {
 
     // Calculate rotation.
     direction = this.data.reverseMouseDrag ? 1 : -1;
-    yawObject.rotation.y += movementX * 0.002 * direction;
-    pitchObject.rotation.x += movementY * 0.002 * direction;
+    yawObject.rotation.y += movementX * 0.02 * direction;
+    pitchObject.rotation.x += movementY * 0.02 * direction;
     pitchObject.rotation.x = Math.max(-PI_2, Math.min(PI_2, pitchObject.rotation.x));
   },
 
